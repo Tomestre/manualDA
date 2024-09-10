@@ -6,37 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fonte Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet"> <!-- Fonte Estilizada -->
     <title>Manual do Aprovado - Landing Page</title>
-    <style>
-        /* CSS incluído diretamente no HTML para garantir que a atualização esteja visível */
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 1000px; /* Ajustado para paisagem */
-            margin: 0 auto;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-        }
-
-        .video-thumbnail, #video-frame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .video-thumbnail {
-            z-index: 1;
-        }
-
-        #video-frame {
-            display: none; /* Ocultar iframe inicialmente */
-        }
-    </style>
 </head>
-<body>
+<body>  
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -45,14 +17,14 @@
             <!-- VSL Video -->
             <section class="video-section">
                 <div class="video-container">
-                    <img src="./src/maxresdefault.jpg" class="video-thumbnail" alt="Imagem de pré-visualização do vídeo"/>
-                    <button class="play-button" onclick="playVideo()">
-                        <img src="./src/—Pngtree—vector play button icon_4184109.png" alt="Ícone de reprodução"/>
+                    <img src="./src/maxresdefault.jpg" class="video-thumbnail" alt="Thumbnail" />
+                    <button class="play-button " onclick="playVideo()">
+                        <img src="./src/—Pngtree—vector play button icon_4184109.png" alt="Play Icon" />
                     </button>
                     <iframe id="video-frame" src="https://www.youtube.com/embed/9pVhuiFjDWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div id="cta-container" style="display: none;">
-                    <button class="cta-button">Sim, Eu Quero Passar na Prova!</button>
+                    <button class="cta-button float">Sim, Eu Quero Passar na Prova!</button>
                 </div>
             </section>
         </div>
@@ -95,7 +67,7 @@
     <section class="bonuses">
         <h2>Bônus Exclusivo para Hoje!</h2>
         <p>Além do Manual do Aprovado, você receberá o E-book Foco Total, que vai te ajudar a focar nos estudos e ter mais chances de passar na prova teórica.</p>
-        <button class="cta-button">Garanta Seu Acesso Agora e Receba o Bônus Exclusivo!</button>
+        <button class="cta-button float">Garanta Seu Acesso Agora e Receba o Bônus Exclusivo!</button>
     </section>
 
     <!-- Garantia e Confiança Section -->
@@ -117,24 +89,26 @@
     <!-- CTA Final Section -->
     <section class="final-cta">
         <h2>Não Perca Mais Tempo – Comece Agora Sua Jornada para a Aprovação!</h2>
-        <button class="cta-button">Sim, Eu Quero Passar na Prova!</button>
+        <button class="cta-button float">Sim, Eu Quero Passar na Prova!</button>
     </section>
 
     <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5551999999999" class="whatsapp-float" target="_blank">
-        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Ícone do WhatsApp"/>
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
     </a>
 
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Manual do Aprovado. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- JavaScript -->
     <script>
         function playVideo() {
             const videoFrame = document.getElementById('video-frame');
             const playButton = document.querySelector('.play-button');
-            const videoThumbnail = document.querySelector('.video-thumbnail');
             const ctaContainer = document.getElementById('cta-container');
+            const videoThumbnail = document.querySelector('.video-thumbnail');
 
             // Mostrar o iframe do vídeo e ocultar a imagem do disparo
             videoFrame.style.display = 'block';
@@ -145,11 +119,34 @@
             const src = videoFrame.getAttribute('src');
             videoFrame.setAttribute('src', src + "?autoplay=1");
 
-            // Mostrar o botão CTA após 30 segundos
+            // Mostrar o botão CTA após 20 segundos
             setTimeout(() => {
                 ctaContainer.style.display = 'block';
-            }, 20000); // 20000 ms = 30 segundos
+            }, 20000); // 20000 ms = 20 segundos
         }
+
+        // Função para animar os botões flutuantes
+        function floatButtons() {
+            const buttons = document.querySelectorAll('.float');
+            buttons.forEach(button => {
+                let position = 0;
+                let direction = 1; // Direção inicial de movimento: 1 = para cima, -1 = para baixo
+
+                setInterval(() => {
+                    // Atualizar a posição do botão
+                    position += direction * 0.5;
+                    button.style.transform = `translateY(${position}px)`;
+
+                    // Inverter a direção quando o botão atinge um limite
+                    if (position > 10 || position < -10) {
+                        direction *= -1;
+                    }
+                }, 30); // A cada 30 milissegundos
+            });
+        }
+
+        // Executa a função ao carregar a página
+        window.onload = floatButtons;
     </script>
 </body>
 </html>

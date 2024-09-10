@@ -11,6 +11,7 @@ section {
     color: #ffffff; /* Texto padrão branco */
     padding: 50px 20px;
     margin-bottom: 30px; /* Espaçamento entre seções */
+    overflow: hidden;
 }
 
 .hero {
@@ -20,7 +21,7 @@ section {
 
 .hero h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.8em; /* Ajuste da escala tipográfica */
     margin-bottom: 20px;
     color: #ffffff; /* Título branco */
 }
@@ -79,6 +80,7 @@ section {
 #cta-container {
     text-align: center;
     margin-top: 20px;
+    
 }
 
 .cta-button {
@@ -92,6 +94,7 @@ section {
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adicionada sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de flutuação */
+    overflow: hidden;
 }
 
 .cta-button:hover {
@@ -101,22 +104,30 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Aumenta a sombra */
 }
 
+.float {
+    position: relative; /* Para manter o botão dentro do fluxo de layout */
+    will-change: transform; /* Otimização para melhor performance */
+}
+
 h2 {
     font-family: 'Raleway', sans-serif;
     color: #fd9e00; /* Títulos em laranja */
     margin-bottom: 20px;
+    font-size: 2em; /* Ajuste da escala tipográfica */
 }
 
 .testimonials blockquote {
     font-style: italic;
     margin: 20px 0;
     color: #ffffff; /* Testemunhos em branco */
+    font-size: 1.2em; /* Ajuste da escala tipográfica */
 }
 
 ul {
     list-style-type: none;
     padding: 0;
     color: #ffffff; /* Texto da lista branco */
+    font-size: 1.1em; /* Ajuste da escala tipográfica */
 }
 
 ul li {
@@ -143,6 +154,11 @@ footer {
     text-align: center;
     font-size: 40px; /* Aumentado */
     z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
 }
 
 .whatsapp-float img {
@@ -171,7 +187,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 1.8em;
+        font-size: 2em; /* Ajuste responsivo */
     }
 
     .hero p {
@@ -206,7 +222,7 @@ footer {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.5em;
+        font-size: 1.8em; /* Ajuste responsivo */
     }
 
     .cta-button {
