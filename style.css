@@ -29,7 +29,14 @@ section {
 .hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
-    color: #fd9e00; /* Texto de destaque laranja */
+    color: #ffffff; /* Texto de destaque branco */
+}
+.authority{
+    display: grid;
+    justify-items: center;
+}
+.authority img {
+    border-radius: 360px;
 }
 
 .video-container {
@@ -111,7 +118,7 @@ section {
 
 h2 {
     font-family: 'Raleway', sans-serif;
-    color: #fd9e00; /* Títulos em laranja */
+    color: #ffffff; /* Títulos em laranja */
     margin-bottom: 20px;
     font-size: 2em; /* Ajuste da escala tipográfica */
 }
@@ -132,7 +139,7 @@ ul {
 
 ul li {
     margin: 10px 0;
-    color: #fd9e00; /* Texto de itens de lista laranja */
+    color: #ffffff; /* Texto de itens de lista laranja */
 }
 
 footer {
@@ -179,6 +186,11 @@ footer {
     margin: 0 auto;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
+span {
+    transform: scale(1.1);
+    font-size: larger;
+    color: #fd9e00;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -202,6 +214,8 @@ footer {
     section {
         padding: 30px 15px;
     }
+
+    
 
     footer {
         padding: 15px;
