@@ -36,6 +36,7 @@ section {
     justify-items: center;
 }
 .authority img {
+    width: 350px;
     border-radius: 360px;
 }
 
@@ -140,6 +141,88 @@ ul {
 ul li {
     margin: 10px 0;
     color: #ffffff; /* Texto de itens de lista laranja */
+}
+
+.parallax-section {
+    position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+    background-color: #fd9e00;
+    background-image: url('./src/autoescola.jpg');
+    background-attachment: fixed; /* Efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 20px; /* Ajuste o espaçamento conforme necessário */
+    color: #fff; /* Cor do texto para contraste */
+    text-align: center;
+    overflow: hidden; /* Garante que o pseudo-elemento não ultrapasse os limites da seção */
+}
+
+.parallax-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Filtro escuro sobre a imagem */
+    z-index: 1; /* Coloca o filtro acima da imagem de fundo */
+}
+
+.problems-solutions h2,
+.problems-solutions ul,
+.problems-solutions p {
+    text-align: left;
+    position: relative; /* Garante que o conteúdo fique acima do pseudo-elemento */
+    z-index: 2; /* Coloca o texto acima do filtro escuro */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente para o texto */
+    display: block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaçamento entre os elementos */
+}
+
+.problems-solutions ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0 10;
+}
+
+.problems-solutions ul li {
+    margin: 10px 0;
+}
+
+/* Estilos do Carrossel */
+.carousel {
+    width: 100%;
+    overflow: hidden; /* Oculta o excesso de conteúdo para criar o efeito de carrossel */
+    margin-top: 30px;
+    position: relative; /* Para usar a posição absoluta no JavaScript */
+}
+
+.carousel-track {
+    display: flex; /* Layout em linha para o carrossel */
+    animation: scroll 20s linear infinite; /* Animação infinita */
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 400px; /* Tamanho máximo de cada imagem */
+    margin: 0 10px; /* Espaçamento entre imagens */
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorcer */
+    border-radius: 8px; /* Opcional: bordas arredondadas */
+}
+
+/* Animação infinita do carrossel */
+@keyframes scroll {
+    0% {
+        transform: translateX(25);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+.social-proof{
+    text-align: center;
 }
 
 footer {
