@@ -1,0 +1,232 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Mudança para Roboto */
+    margin: 0;
+    padding: 0;
+    background-color: #fd9e00; /* Fundo laranja */
+    color: #ffffff;
+}
+
+section {
+    background-color: #000000; /* Seções em preto */
+    color: #ffffff; /* Texto padrão branco */
+    padding: 50px 20px;
+    margin-bottom: 30px; /* Espaçamento entre seções */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Título branco */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #fd9e00; /* Texto de destaque laranja */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.play-button img {
+    width: 180px; /* Aumentado */
+    height: 180px; /* Aumentado */
+}
+.play-button img:hover {
+    transform: scale(1.2);
+}
+
+#video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Ocultar iframe inicialmente */
+}
+
+#cta-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    background-color: #fd9e00; /* Botão laranja */
+    color: #ffffff; /* Texto do botão branco */
+    padding: 20px 40px; /* Aumentado */
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5em; /* Aumentado */
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adicionada sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de flutuação */
+}
+
+.cta-button:hover {
+    background-color: #ffffff; /* Hover do botão branco */
+    color: #000000; /* Texto do botão preto */
+    transform: scale(1.1); /* Efeito de flutuação */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Aumenta a sombra */
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #fd9e00; /* Títulos em laranja */
+    margin-bottom: 20px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    color: #ffffff; /* Testemunhos em branco */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: #ffffff; /* Texto da lista branco */
+}
+
+ul li {
+    margin: 10px 0;
+    color: #fd9e00; /* Texto de itens de lista laranja */
+}
+
+footer {
+    background-color: #000000; /* Rodapé preto */
+    color: #ffffff; /* Texto do rodapé branco */
+    text-align: center;
+    padding: 20px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 80px; /* Aumentado */
+    height: 80px; /* Aumentado */
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px; /* Aumentado */
+    z-index: 100;
+}
+
+.whatsapp-float img {
+    margin-top: 10px;
+    width: 50px; /* Aumentado */
+    height: 50px; /* Aumentado */
+}
+
+.video-section {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 15px 30px; /* Ajustado */
+        font-size: 1.2em; /* Ajustado */
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .whatsapp-float {
+        width: 70px; /* Ajustado */
+        height: 70px; /* Ajustado */
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .whatsapp-float img {
+        width: 40px; /* Ajustado */
+        height: 40px; /* Ajustado */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Ajustado */
+        font-size: 1em; /* Ajustado */
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    .whatsapp-float {
+        width: 60px; /* Ajustado */
+        height: 60px; /* Ajustado */
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float img {
+        width: 35px; /* Ajustado */
+        height: 35px; /* Ajustado */
+    }
+}

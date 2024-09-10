@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fonte Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet"> <!-- Fonte Estilizada -->
+    <title>Manual do Aprovado - Landing Page</title>
+    <style>
+        /* CSS incluído diretamente no HTML para garantir que a atualização esteja visível */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px; /* Ajustado para paisagem */
+            margin: 0 auto;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video-thumbnail, #video-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-thumbnail {
+            z-index: 1;
+        }
+
+        #video-frame {
+            display: none; /* Ocultar iframe inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Aprovação Garantida na Prova Teórica do Detran: Conheça o Método que Já Aprovou Milhares!</h1>
+            <p>Aprenda com o Método Manual do Aprovado e finalmente passe na sua prova teórica, sem estresse e sem desperdício de tempo e dinheiro!</p>
+            <!-- VSL Video -->
+            <section class="video-section">
+                <div class="video-container">
+                    <img src="./src/maxresdefault.jpg" class="video-thumbnail" alt="Imagem de pré-visualização do vídeo"/>
+                    <button class="play-button" onclick="playVideo()">
+                        <img src="./src/—Pngtree—vector play button icon_4184109.png" alt="Ícone de reprodução"/>
+                    </button>
+                    <iframe id="video-frame" src="https://www.youtube.com/embed/9pVhuiFjDWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="cta-container" style="display: none;">
+                    <button class="cta-button">Sim, Eu Quero Passar na Prova!</button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Problemas e Soluções Section -->
+    <section class="problems-solutions">
+        <h2>Você Está Cansado de Reprovar na Prova Teórica?</h2>
+        <ul>
+            <li>Você já reprovou várias vezes na prova teórica?</li>
+            <li>Tem dificuldades para memorizar as questões?</li>
+            <li>Está cansado de investir dinheiro em retestes?</li>
+        </ul>
+        <p>Conheça o Método Manual do Aprovado – uma abordagem prática e eficiente que já ajudou milhares de alunos a conquistar sua tão sonhada aprovação na prova teórica do Detran.</p>
+    </section>
+
+    <!-- Prova Social e Credibilidade Section -->
+    <section class="social-proof">
+        <h2>O Método que Aprova!</h2>
+        <div class="testimonials">
+            <blockquote>“Eu estava quase desistindo, mas com o Manual do Aprovado passei de primeira!” - João Silva</blockquote>
+            <blockquote>“Método incrível! Simples e eficiente.” - Maria Oliveira</blockquote>
+        </div>
+        <p>Mais de 5.000 alunos aprovados, 30 provas oficiais incluídas, 100% de autenticidade com provas reais do Detran Goiás.</p>
+    </section>
+
+    <!-- Detalhes do Produto e Benefícios Section -->
+    <section class="product-details">
+        <h2>O Que Você Vai Receber Ao Comprar o Manual do Aprovado</h2>
+        <ul>
+            <li>✔ Dicas e técnicas exclusivas</li>
+            <li>✔ Correção de provas detalhada</li>
+            <li>✔ Plano de estudo personalizado</li>
+            <li>✔ Acesso a 30 provas oficiais do Detran Goiás</li>
+            <li>✔ E-book Foco Total: Garanta sua Aprovação</li>
+        </ul>
+    </section>
+
+    <!-- Bônus e Urgência Section -->
+    <section class="bonuses">
+        <h2>Bônus Exclusivo para Hoje!</h2>
+        <p>Além do Manual do Aprovado, você receberá o E-book Foco Total, que vai te ajudar a focar nos estudos e ter mais chances de passar na prova teórica.</p>
+        <button class="cta-button">Garanta Seu Acesso Agora e Receba o Bônus Exclusivo!</button>
+    </section>
+
+    <!-- Garantia e Confiança Section -->
+    <section class="guarantee">
+        <h2>Sua Aprovação ou Seu Dinheiro de Volta!</h2>
+        <p>Se após 30 dias de estudo com o Manual do Aprovado você não se sentir preparado para a prova teórica, devolvemos 100% do seu investimento.</p>
+    </section>
+
+    <!-- Perguntas Frequentes (FAQ) Section -->
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <ul>
+            <li><strong>Como acesso o conteúdo após a compra?</strong> Após a compra, você receberá um link de acesso no seu e-mail.</li>
+            <li><strong>Qual é a validade do material?</strong> O acesso ao material é vitalício.</li>
+            <li><strong>E se eu não passar na prova?</strong> Oferecemos uma garantia de 100% de reembolso.</li>
+        </ul>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section class="final-cta">
+        <h2>Não Perca Mais Tempo – Comece Agora Sua Jornada para a Aprovação!</h2>
+        <button class="cta-button">Sim, Eu Quero Passar na Prova!</button>
+    </section>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5551999999999" class="whatsapp-float" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Ícone do WhatsApp"/>
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Manual do Aprovado. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function playVideo() {
+            const videoFrame = document.getElementById('video-frame');
+            const playButton = document.querySelector('.play-button');
+            const videoThumbnail = document.querySelector('.video-thumbnail');
+            const ctaContainer = document.getElementById('cta-container');
+
+            // Mostrar o iframe do vídeo e ocultar a imagem do disparo
+            videoFrame.style.display = 'block';
+            playButton.style.display = 'none';
+            videoThumbnail.style.display = 'none';
+
+            // Reproduzir o vídeo
+            const src = videoFrame.getAttribute('src');
+            videoFrame.setAttribute('src', src + "?autoplay=1");
+
+            // Mostrar o botão CTA após 30 segundos
+            setTimeout(() => {
+                ctaContainer.style.display = 'block';
+            }, 20000); // 20000 ms = 30 segundos
+        }
+    </script>
+</body>
+</html>
