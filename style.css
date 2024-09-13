@@ -25,7 +25,7 @@ section {
     background-attachment: fixed; /* Efeito parallax */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
 }
 
 .division {
@@ -381,6 +381,10 @@ span {
         }
     }
 
+    .division-content{
+        background-size: 150% auto;
+    }
+
     .division {
         height: 200px; /* Ajuste da altura para telas menores */
         background-size: auto 120%; /* Aumenta a altura para compensar a largura */
@@ -425,6 +429,9 @@ span {
         100% {
             transform: translateX(-325%);
         }
+    }
+    .division-content{
+        background-size: 270% auto;
     }
 
     .division {
