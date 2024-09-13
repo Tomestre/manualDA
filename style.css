@@ -12,7 +12,6 @@ section {
     color: #ffffff; /* Texto padrão branco */
     padding: 50px 20px;
     overflow: hidden;
-    max-width: 1440px;
     margin: 0 auto;
     text-align: center;
 }
