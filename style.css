@@ -21,6 +21,12 @@ section {
     position: relative;
     height: 150px;
     z-index: 2;
+    background-color: #fd9e00;
+    background-image: url('./src/autoescola.jpg');
+    background-attachment: fixed; /* Efeito parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .division {
@@ -230,6 +236,12 @@ ul li {
     margin: 0 10px; /* Espaçamento entre imagens */
     object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorcer */
     border-radius: 8px; /* Opcional: bordas arredondadas */
+}
+.filter {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Filtro escuro sobre a imagem */
+    z-index: 1; 
 }
 
 /* Animação infinita do carrossel */
