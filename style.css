@@ -4,14 +4,35 @@ body {
     padding: 0;
     background-color: #fd9e00; /* Fundo laranja */
     color: #ffffff;
+    justify-content: center;
 }
 
 section {
     background-color: #000000; /* Seções em preto */
     color: #ffffff; /* Texto padrão branco */
     padding: 50px 20px;
-    margin-bottom: 30px; /* Espaçamento entre seções */
     overflow: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.division-content{
+    position: relative;
+    height: 150px;
+    z-index: 2;
+}
+
+.division {
+    position: absolute;
+    top: -42px;
+    width: 100%; 
+    height: 281px; 
+    background-image: url(./src/faixa.png); 
+    background-repeat: no-repeat; /* Repetir horizontalmente */
+    background-size: contain; /* Ajustar a imagem ao tamanho da divisão */
+    background-position: center;
+    display: block;
 }
 
 .hero {
@@ -100,7 +121,7 @@ section {
     font-size: 1.5em; /* Aumentado */
     cursor: pointer;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adicionada sombra */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* Adicionada sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de flutuação */
     overflow: hidden;
 }
@@ -171,7 +192,7 @@ ul li {
 .problems-solutions h2,
 .problems-solutions ul,
 .problems-solutions p {
-    text-align: left;
+    text-align: center;
     position: relative; /* Garante que o conteúdo fique acima do pseudo-elemento */
     z-index: 2; /* Coloca o texto acima do filtro escuro */
     background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente para o texto */
@@ -214,7 +235,7 @@ ul li {
 /* Animação infinita do carrossel */
 @keyframes scroll {
     0% {
-        transform: translateX(25);
+        transform: translateX(10%);
     }
     100% {
         transform: translateX(-25%);
@@ -222,6 +243,21 @@ ul li {
 }
 
 .social-proof{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex img {
+    width: 500px;
+    padding: 30px;
+}
+
+.bonuses{
     text-align: center;
 }
 
@@ -236,9 +272,8 @@ footer {
     position: fixed;
     width: 80px; /* Aumentado */
     height: 80px; /* Aumentado */
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
+    bottom: 120px;
+    right: 70px;
     color: #fff;
     border-radius: 50px;
     text-align: center;
@@ -253,8 +288,11 @@ footer {
 
 .whatsapp-float img {
     margin-top: 10px;
-    width: 50px; /* Aumentado */
-    height: 50px; /* Aumentado */
+    width: 120px; /* Aumentado */
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
 }
 
 .video-section {
@@ -273,6 +311,10 @@ span {
     transform: scale(1.1);
     font-size: larger;
     color: #fd9e00;
+}
+
+.product-details ul{
+    text-align: left;
 }
 
 /* Responsividade */
@@ -298,8 +340,6 @@ span {
         padding: 30px 15px;
     }
 
-    
-
     footer {
         padding: 15px;
     }
@@ -307,13 +347,32 @@ span {
     .whatsapp-float {
         width: 70px; /* Ajustado */
         height: 70px; /* Ajustado */
-        bottom: 30px;
-        right: 30px;
+        bottom: 120px;
+        right: 60px;
     }
 
     .whatsapp-float img {
-        width: 40px; /* Ajustado */
-        height: 40px; /* Ajustado */
+        margin-top: 10px;
+        width: 120px; /* Aumentado */
+    }
+
+    .carousel-track {
+        display: flex; /* Layout em linha para o carrossel */
+        animation: scroll 20s linear infinite; /* Animação infinita */
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(50%);
+        }
+        100% {
+            transform: translateX(-150%);
+        }
+    }
+
+    .division {
+        height: 200px; /* Ajuste da altura para telas menores */
+        background-size: auto 120%; /* Aumenta a altura para compensar a largura */
     }
 }
 
@@ -334,12 +393,32 @@ span {
     .whatsapp-float {
         width: 60px; /* Ajustado */
         height: 60px; /* Ajustado */
-        bottom: 20px;
-        right: 20px;
+        bottom: 120px;
+        right: 60px;
     }
 
     .whatsapp-float img {
-        width: 35px; /* Ajustado */
-        height: 35px; /* Ajustado */
+        margin-top: 10px;
+        width: 120px; /* Aumentado */
+    }
+
+    .carousel-track {
+        display: flex; /* Layout em linha para o carrossel */
+        animation: scroll 20s linear infinite; /* Animação infinita */
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(25%);
+        }
+        100% {
+            transform: translateX(-325%);
+        }
+    }
+
+    .division {
+        height: 180px; /* Ajuste da altura para telas ainda menores */
+        background-size: auto 100%; /* Aumenta mais a altura */
+        top:-20px
     }
 }
